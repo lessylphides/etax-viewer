@@ -1,0 +1,16 @@
+{
+  "name": "etax-viewer",
+  "version": "1.0.0",
+  "private": true,
+  "description": "국세청 전자세금계산서 메일 첨부파일(NTS_eTaxInvoice.html)을 브라우저 안에서 열어 보는 단독 웹페이지",
+  "type": "module",
+  "scripts": {
+    "test": "vitest run",
+    "test:e2e": "playwright test",
+    "serve": "python3 -m http.server 8000 --directory site"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.63.0",
+    "vitest": "^5.1.0"
+  }
+}

@@ -87,3 +87,12 @@ test('국세청 파일이 아니면 알려 줌', async ({ page }) => {
   await page.locator('#file').setInputFiles({ name: 'other.html', mimeType: 'text/html', buffer: Buffer.from('<html>hi</html>') });
   await expect(page.getByRole('alert')).toContainText('보안메일 파일');
 });
+
+test('홈 화면 아이콘이 있음', async ({ page }) => {
+  await openViewer(page);
+  for (const rel of ['icon', 'apple-touch-icon']) {
+    const href = await page.locator(`link[rel="${rel}"]`).getAttribute('href');
+    const file = await readFile(new URL(href, DIR));
+    expect(file.length, rel).toBeGreaterThan(0);
+  }
+});

@@ -38,6 +38,9 @@ site/            배포되는 정적 파일 (빌드 없음)
   app.js         화면 동작
   etax.js        해독(MD5·SEED)과 표준 XML 읽기
   style.css
+  icon.svg       아이콘 원본(브라우저 탭 아이콘으로도 씀)
+  apple-touch-icon.png  아이폰 홈 화면 아이콘 (npm run icons 로 icon.svg 에서 만듦)
+scripts/icons.js 아이콘 PNG 만들기
 tests/           단위 테스트(vitest)·화면 테스트(Playwright, 아이폰 13 크기)
 ```
 

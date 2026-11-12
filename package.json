@@ -7,7 +7,8 @@
   "scripts": {
     "test": "vitest run",
     "test:e2e": "playwright test",
-    "serve": "python3 -m http.server 8000 --directory site"
+    "serve": "python3 -m http.server 8000 --directory site",
+    "icons": "node scripts/icons.js"
   },
   "devDependencies": {
     "@playwright/test": "^1.63.0",
